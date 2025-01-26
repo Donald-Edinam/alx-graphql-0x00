@@ -1,0 +1,12 @@
+
+    query GetCharactersByPage {
+      characters(page: 1) {
+        results {
+          id
+          name
+          status
+          image
+        }
+      }
+    }
+    
