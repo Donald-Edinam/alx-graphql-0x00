@@ -29,8 +29,8 @@ for episode_id in episode_ids:
         # Parse the JSON response
         data = response.json()
 
-        # Define the output filename
-        output_file = f"episode-id-{episode_id}-output.json"
+        # Define the output filename (using the characters-page-* naming convention)
+        output_file = f"characters-page-{episode_id}-output.json"
 
         # Save the response to a JSON file
         with open(output_file, 'w') as f:
@@ -54,8 +54,8 @@ for episode_id in episode_ids:
     }}
     """
 
-    # Save the query to a .graphql file
-    query_file = f"episode-id-{episode_id}.graphql"
+    # Save the query to a .graphql file (using the episode-page-* naming convention)
+    query_file = f"episode-page-{episode_id}.graphql"
     with open(query_file, 'w') as f:
         f.write(query)
 
